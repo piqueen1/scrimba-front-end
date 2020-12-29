@@ -1,3 +1,13 @@
 body {
   margin: 0;
 }
+
+h1 {
+  color: #fff;
+  font-size: 72px;
+  background-color: #281b2d;
+  margin-top: 0px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
