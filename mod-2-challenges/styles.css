@@ -19,3 +19,7 @@ h1 {
   border-bottom: 5px solid #00c54c;
   padding: 20px;
 }
+
+.whiten {
+  color: #fff;
+}
