@@ -11,3 +11,11 @@ h1 {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+.subheading {
+  color: #fcd801;
+  font-size: 48px;
+  background-color: #281b2d;
+  border-bottom: 5px solid #00c54c;
+  padding: 20px;
+}
