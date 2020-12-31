@@ -12,21 +12,21 @@ const squares = Array.from(document.querySelectorAll('.grid div'))
 
 const layout = [
   1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-  1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
+  1,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,1,
   1,2,1,1,1,1,2,1,2,1,2,1,1,1,1,1,2,1,
   1,2,1,1,1,1,2,1,2,1,2,1,1,1,1,1,2,1,
   1,2,2,2,2,2,2,1,2,1,2,2,2,2,2,2,2,1,
   1,2,1,1,1,1,2,1,2,1,2,1,1,1,1,1,2,1,
   1,2,1,2,2,2,2,2,2,2,2,1,2,2,2,1,2,1,
   1,2,2,2,1,2,1,1,2,1,1,1,2,1,2,2,2,1,
-  1,1,1,2,1,2,1,2,2,2,1,1,2,1,2,1,1,1,
+  1,1,1,2,1,2,1,4,2,2,1,1,2,1,2,1,1,1,
   1,2,2,2,1,2,1,2,2,2,1,2,2,1,2,2,2,1,
-  1,2,1,1,1,2,1,2,2,2,1,2,1,1,1,1,2,1,
+  1,2,1,1,1,2,1,5,2,6,1,2,1,1,1,1,2,1,
   1,2,2,2,1,2,1,1,2,1,1,2,1,1,2,2,2,1,
-  1,2,1,1,2,2,2,2,2,2,2,2,2,2,1,1,2,1,
+  1,2,1,1,2,2,2,2,7,2,2,2,2,2,1,1,2,1,
   1,2,2,2,2,1,2,1,2,1,2,1,2,2,2,2,2,1,
   1,2,1,1,1,1,2,1,2,1,2,1,1,1,1,1,2,1,
-  1,2,2,2,1,2,2,1,2,1,2,2,2,1,2,2,2,1,
+  1,3,2,2,1,2,2,1,2,1,2,2,2,1,2,2,3,1,
   1,1,1,2,2,2,1,1,1,1,1,2,2,2,2,1,1,1,
   1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
 ]
@@ -34,7 +34,12 @@ const layout = [
 for (let i = 0; i<layout.length; i++) {
   const currentLayout = layout[i]
   const currentSquare = squares[i]
-  if (currentLayout === 1) {
-    currentSquare.classList.add('wall')
-  }
+  if (currentLayout === 1) currentSquare.classList.add('wall')
+  if (currentLayout === 2) currentSquare.classList.add('pacdot')
+  if (currentLayout === 3) currentSquare.classList.add('powerpellet')
+  if (currentLayout === 4) currentSquare.classList.add('blinky')
+  if (currentLayout === 5) currentSquare.classList.add('pinky')
+  if (currentLayout === 6) currentSquare.classList.add('inky')
+  if (currentLayout === 7) currentSquare.classList.add('clyde')
+
 }
