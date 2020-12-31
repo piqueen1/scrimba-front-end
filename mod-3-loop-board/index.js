@@ -13,3 +13,5 @@ for (let i=0; i<squares.length; i++) {
       squares[i].style.background = 'black';
   }
 }
+
+console.log('Hello')
