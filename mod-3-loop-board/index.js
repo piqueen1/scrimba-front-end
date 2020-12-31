@@ -6,3 +6,10 @@ const squares = Array.from(document.querySelectorAll('.grid div'))
 //for loop.
 
 //Don't forget to share your code in the #share-your-code channel on discord.
+for (let i=0; i<squares.length; i++) {
+  if (i % 2 === 0) {
+      squares[i].style.background = 'white';
+  } else {
+      squares[i].style.background = 'black';
+  }
+}
