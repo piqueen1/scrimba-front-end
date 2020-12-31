@@ -1,0 +1,21 @@
+body {
+    background-color: #FFABAB;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    margin-top: 50px;
+    width: 288px;
+    height: 288px;
+    border: solid white 8px;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div {
+    width: 30px;
+    height: 30px;
+    border: solid white 0.5px;
+}
