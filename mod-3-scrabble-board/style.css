@@ -1,0 +1,39 @@
+body {
+  background-color: #ace7ff;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  margin-top: 30px;
+  width: 416px;
+  height: 416px;
+  border: solid white 8px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  width: 30px;
+  height: 30px;
+  border: solid white 0.5px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.triple {
+  background-color: #ffbebc;
+}
+
+.tile {
+  background-color: #fff5ba;
+}
+
+.blank {
+}
+
+.letter {
+  background-color: #fef5bb;
+  color: #070705;
+}

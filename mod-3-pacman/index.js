@@ -41,5 +41,4 @@ for (let i = 0; i<layout.length; i++) {
   if (currentLayout === 5) currentSquare.classList.add('pinky')
   if (currentLayout === 6) currentSquare.classList.add('inky')
   if (currentLayout === 7) currentSquare.classList.add('clyde')
-
 }
