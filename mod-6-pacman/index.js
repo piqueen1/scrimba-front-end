@@ -68,11 +68,12 @@ let pacmanCurrentIndex = 490
 squares[pacmanCurrentIndex].classList.add('pacman')
 
 function control(e) {
+  squares[pacmanCurrentIndex].classList.remove('pacman')
   switch (e.keyCode) {
     case 40:
       pacmanCurrentIndex = pacmanCurrentIndex + 28
       squares[pacmanCurrentIndex].classList.add('pacman')
-      break
+    break
     case 38:
       pacmanCurrentIndex = pacmanCurrentIndex -28
       squares[pacmanCurrentIndex].classList.add('pacman')
@@ -82,10 +83,10 @@ function control(e) {
       squares[pacmanCurrentIndex].classList.add('pacman')
       break
     case 39:
-      pacmanCurrentIndex = pacmanCurrentIndex + 1
-      squares[pacmanCurrentIndex].classList.add('pacman')
-      break
+    pacmanCurrentIndex = pacmanCurrentIndex + 1
+    squares[pacmanCurrentIndex].classList.add('pacman')
+    break
   }
 }
-
+        
 document.addEventListener('keyup',control)
