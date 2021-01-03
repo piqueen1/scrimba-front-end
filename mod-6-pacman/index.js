@@ -61,5 +61,31 @@ function createBoard() {
     }
   }
 }
-
 createBoard()
+
+//starting position of pacman
+let pacmanCurrentIndex = 490
+squares[pacmanCurrentIndex].classList.add('pacman')
+
+function control(e) {
+  switch (e.keyCode) {
+    case 40:
+      pacmanCurrentIndex = pacmanCurrentIndex + 28
+      squares[pacmanCurrentIndex].classList.add('pacman')
+      break
+    case 38:
+      pacmanCurrentIndex = pacmanCurrentIndex -28
+      squares[pacmanCurrentIndex].classList.add('pacman')
+      break
+    case 37:
+      pacmanCurrentIndex = pacmanCurrentIndex - 1
+      squares[pacmanCurrentIndex].classList.add('pacman')
+      break
+    case 39:
+      pacmanCurrentIndex = pacmanCurrentIndex + 1
+      squares[pacmanCurrentIndex].classList.add('pacman')
+      break
+  }
+}
+
+document.addEventListener('keyup',control)
