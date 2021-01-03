@@ -71,22 +71,31 @@ function control(e) {
   squares[pacmanCurrentIndex].classList.remove('pacman')
   switch (e.keyCode) {
     case 40:
-      pacmanCurrentIndex = pacmanCurrentIndex + 28
-      squares[pacmanCurrentIndex].classList.add('pacman')
-    break
+      if (
+        !squares[pacmanCurrentIndex + width].classList.contains('wall') &&
+        pacmanCurrentIndex + width < width * width
+        ) pacmanCurrentIndex += width
+      break
     case 38:
-      pacmanCurrentIndex = pacmanCurrentIndex -28
-      squares[pacmanCurrentIndex].classList.add('pacman')
+      if (
+        !squares[pacmanCurrentIndex - width].classList.contains('wall') &&
+        pacmanCurrentIndex - width >= 0
+        ) pacmanCurrentIndex -= width
       break
     case 37:
-      pacmanCurrentIndex = pacmanCurrentIndex - 1
-      squares[pacmanCurrentIndex].classList.add('pacman')
+      if (
+        !squares[pacmanCurrentIndex - 1].classList.contains('wall') &&
+        pacmanCurrentIndex % width !== 0
+        ) pacmanCurrentIndex -= 1
       break
     case 39:
-    pacmanCurrentIndex = pacmanCurrentIndex + 1
-    squares[pacmanCurrentIndex].classList.add('pacman')
-    break
+      if (
+        !squares[pacmanCurrentIndex + 1].classList.contains('wall') &&
+        pacmanCurrentIndex % width < width - 1
+        ) pacmanCurrentIndex += 1
+      break
   }
+  squares[pacmanCurrentIndex].classList.add('pacman')
 }
-        
+
 document.addEventListener('keyup',control)
