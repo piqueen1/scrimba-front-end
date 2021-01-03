@@ -56,7 +56,9 @@ function createBoard() {
       currentSquare.classList.add('pac-dot')
     } else if (currentLayout === 1) {
       currentSquare.classList.add('wall')
-    }  else if (currentLayout === 3) {
+    }  else if (currentLayout === 2) {
+      currentSquare.classList.add('ghost-lair')
+    } else if (currentLayout === 3) {
       currentSquare.classList.add('power-pellet')
     }
   }
@@ -72,27 +74,37 @@ function control(e) {
   switch (e.keyCode) {
     case 40:
       if (
+        !squares[pacmanCurrentIndex + width].classList.contains('ghost-lair') &&
         !squares[pacmanCurrentIndex + width].classList.contains('wall') &&
         pacmanCurrentIndex + width < width * width
         ) pacmanCurrentIndex += width
       break
     case 38:
       if (
+        !squares[pacmanCurrentIndex - width].classList.contains('ghost-lair') &&
         !squares[pacmanCurrentIndex - width].classList.contains('wall') &&
         pacmanCurrentIndex - width >= 0
         ) pacmanCurrentIndex -= width
       break
     case 37:
       if (
+        !squares[pacmanCurrentIndex - 1].classList.contains('ghost-lair') &&
         !squares[pacmanCurrentIndex - 1].classList.contains('wall') &&
         pacmanCurrentIndex % width !== 0
         ) pacmanCurrentIndex -= 1
+        if (pacmanCurrentIndex === 364) {
+          pacmanCurrentIndex = 391
+        }
       break
     case 39:
       if (
+        !squares[pacmanCurrentIndex + 1].classList.contains('ghost-lair') &&
         !squares[pacmanCurrentIndex + 1].classList.contains('wall') &&
         pacmanCurrentIndex % width < width - 1
         ) pacmanCurrentIndex += 1
+        if (pacmanCurrentIndex === 391) {
+          pacmanCurrentIndex = 364
+        }
       break
   }
   squares[pacmanCurrentIndex].classList.add('pacman')
