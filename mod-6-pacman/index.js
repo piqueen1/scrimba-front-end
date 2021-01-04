@@ -2,6 +2,7 @@ const width = 28
 const grid = document.querySelector('.grid')
 const scoreDisplay = document.querySelector('#score')
 let squares = []
+let score = 0
 
 //28*28 = 784
   // 0 - pac-dots
@@ -108,6 +109,15 @@ function control(e) {
       break
   }
   squares[pacmanCurrentIndex].classList.add('pacman')
+  pacDotEaten()
 }
 
 document.addEventListener('keyup',control)
+
+function pacDotEaten() {
+  if (squares[pacmanCurrentIndex].classList.contains('pac-dot')) {
+    score++
+    scoreDisplay.textContent = ''+ score
+    squares[pacmanCurrentIndex].classList.remove('pac-dot')
+  }
+}
