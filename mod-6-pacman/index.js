@@ -121,3 +121,21 @@ function pacDotEaten() {
     squares[pacmanCurrentIndex].classList.remove('pac-dot')
   }
 }
+
+class Ghost {
+  constructor(className, startIndex, speed) {
+    this.className = className
+    this.startIndex = startIndex
+    this.speed = speed
+  }
+}
+
+const ghosts = [
+  new Ghost('Blinky', 348, 250),
+  new Ghost('Pinky', 376, 400),
+  new Ghost('Inky', 351, 300),
+  new Ghost('Clyde', 379, 500)
+]
+
+//draw my ghosts onto my grid
+ghosts.forEach(ghost => squares[ghost.startIndex].classList.add(ghost.className))
