@@ -26,7 +26,7 @@ const layout = [
   1,1,1,1,1,1,0,1,1,4,1,1,1,2,2,1,1,1,4,1,1,0,1,1,1,1,1,1,
   1,1,1,1,1,1,0,1,1,4,1,2,2,2,2,2,2,1,4,1,1,0,1,1,1,1,1,1,
   4,4,4,4,4,4,0,0,0,4,1,2,2,2,2,2,2,1,4,0,0,0,4,4,4,4,4,4,
-  1,1,1,1,1,1,0,1,1,4,1,2,2,2,2,2,2,1,4,1,1,0,1,1,1,1,1,1,
+  1,1,1,1,1,1,0,1,1,4,2,2,2,2,2,2,2,2,4,1,1,0,1,1,1,1,1,1,
   1,1,1,1,1,1,0,1,1,4,1,1,1,1,1,1,1,1,4,1,1,0,1,1,1,1,1,1,
   1,1,1,1,1,1,0,1,1,4,1,1,1,1,1,1,1,1,4,1,1,0,1,1,1,1,1,1,
   1,0,0,0,0,0,0,0,0,4,4,4,4,4,4,4,4,4,4,0,0,0,0,0,0,0,0,1,
@@ -111,6 +111,7 @@ function control(e) {
   squares[pacmanCurrentIndex].classList.add('pacman')
   pacDotEaten()
   powerPelletEaten()
+  checkForGameover()
 }
 
 document.addEventListener('keyup',control)
@@ -215,3 +216,19 @@ function moveGhost(ghost) {
       }
   }, ghost.speed)
 }
+
+//check for game over
+function checkForGameover() {
+  //if pacman's square contains a ghost and NOT a scared ghost
+  if (
+    squares[pacmanCurrentIndex].classList.contains('ghost') &&
+    !squares[pacmanCurrentIndex].classList.contains('scaredGhost')
+  ) {
+    //stop each ghost from moving, clear interval with ID
+    ghosts.forEach(ghost => clearInterval(ghost.timerId))
+    //remove eventlistener from our control function
+    document.removeEventListener('keyup',control)
+    //tell user the game is over
+    alert('The ghost gotcha!  Game over!')
+  }
+ }
