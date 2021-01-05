@@ -112,6 +112,7 @@ function control(e) {
   pacDotEaten()
   powerPelletEaten()
   checkForGameover()
+  checkForWin()
 }
 
 document.addEventListener('keyup',control)
@@ -215,6 +216,7 @@ function moveGhost(ghost) {
         squares[ghost.currentIndex].classList.add('ghost')
       }
   }, ghost.speed)
+  checkForGameover()
 }
 
 //check for game over
@@ -231,4 +233,15 @@ function checkForGameover() {
     //tell user the game is over
     alert('The ghost gotcha!  Game over!')
   }
+ }
+
+ function checkForWin() {
+   if (score >= 274) {
+     //stop each ghost
+     ghosts.forEach(ghost => clearInterval(ghost.timerId))
+     //remove the event listener
+     document.removeEventListener('keyup',control)
+     //tell user they won
+     alert('You won!  Great job!')
+    }
  }
