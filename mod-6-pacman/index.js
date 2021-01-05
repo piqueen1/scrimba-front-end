@@ -110,6 +110,7 @@ function control(e) {
   }
   squares[pacmanCurrentIndex].classList.add('pacman')
   pacDotEaten()
+  powerPelletEaten()
 }
 
 document.addEventListener('keyup',control)
@@ -122,11 +123,34 @@ function pacDotEaten() {
   }
 }
 
+function powerPelletEaten() {
+  //if square pacman is in contains a power pellet
+  if (squares[pacmanCurrentIndex].classList.contains('power-pellet')) {
+    //remove power-pellet from square
+    squares[pacmanCurrentIndex].classList.remove('power-pellet')
+    
+    //add a score of 10
+    score += 10
+    //change each ghost to isScared true
+    ghosts.forEach(ghost => ghost.isScared = true)
+    //use setTimeout to unscare ghosts after 10 seconds
+    setTimeout(unScareGhosts, 10000)
+  }
+
+  function unScareGhosts() {
+    ghosts.forEach(ghost => ghost.isScared = false, 10000)
+  }
+
+}
+
 class Ghost {
   constructor(className, startIndex, speed) {
     this.className = className
     this.startIndex = startIndex
     this.speed = speed
+    this.currentIndex = startIndex
+    this.isScared = false
+    this.timerId = NaN
   }
 }
 
@@ -138,4 +162,41 @@ const ghosts = [
 ]
 
 //draw my ghosts onto my grid
-ghosts.forEach(ghost => squares[ghost.startIndex].classList.add(ghost.className))
+ghosts.forEach(ghost => {
+  squares[ghost.currentIndex].classList.add(ghost.className)
+  squares[ghost.currentIndex].classList.add('ghost')
+})
+
+
+//move the ghosts
+ghosts.forEach(ghost => moveGhost(ghost))
+
+function moveGhost(ghost) {
+  console.log('ghost moved')
+  const directions = [-1,+1,-width,+width]
+  let direction = directions[Math.floor(Math.random() * directions.length)]
+  console.log(direction)
+
+  ghost.timerId = setInterval(function() {
+    //If next square does not contain a wall or ghost, execute code
+    if (!squares[ghost.currentIndex + direction].classList.contains('wall' || 'ghost')) {
+    
+      //remove current ghost
+      squares[ghost.currentIndex].classList.remove(ghost.className)
+      squares[ghost.currentIndex].classList.remove('ghost')
+      squares[ghost.currentIndex].classList.remove('scaredGhost')
+      //add direction to current index
+      ghost.currentIndex += direction
+      //add ghost class
+      squares[ghost.currentIndex].classList.add(ghost.className)
+      squares[ghost.currentIndex].classList.add('ghost')
+    } else direction = directions[Math.floor(Math.random() * directions.length)]
+  
+    //if gost is scared
+    if (ghost.isScared) {
+      console.log('ghost is scared')
+      squares[ghost.currentIndex].classList.add('scaredGhost')
+    }
+
+  }, ghost.speed)
+}
