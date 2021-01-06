@@ -173,6 +173,11 @@ ghosts.forEach(ghost => {
 //move the ghosts
 ghosts.forEach(ghost => moveGhost(ghost))
 
+//for smart direction: get coordinates of pacman or blinky
+function getCoordinates(index) {
+  return [index % width, Math.floor(index / width)]
+}
+
 function moveGhost(ghost) {
   console.log('ghost moved')
   const directions = [-1,+1,-width,+width]
@@ -181,19 +186,53 @@ function moveGhost(ghost) {
 
   ghost.timerId = setInterval(function() {
     //If next square does not contain a wall or ghost, execute code
-    if (!squares[ghost.currentIndex + direction].classList.contains('wall' || 'ghost')) {
+    if (
+      !squares[ghost.currentIndex + direction].classList.contains('wall') &&
+      !squares[ghost.currentIndex + direction].classList.contains('ghost')
+      ) {
     
       //remove current ghost
       squares[ghost.currentIndex].classList.remove(ghost.className)
       squares[ghost.currentIndex].classList.remove('ghost')
       squares[ghost.currentIndex].classList.remove('scaredGhost')
-      //add direction to current index
-      ghost.currentIndex += direction
-      //add ghost class
-      squares[ghost.currentIndex].classList.add(ghost.className)
-      squares[ghost.currentIndex].classList.add('ghost')
+      
+      //check if ghost is closer by calculating coordinate differences
+      const [ghostX, ghostY] = getCoordinates(ghost.currentIndex)
+      const [pacmanX, pacmanY] = getCoordinates(pacmanCurrentIndex)
+      const [ghostNewX, ghostNewY] = getCoordinates(ghost.currentIndex + direction)
+       
+      function isXCoordCloser() {
+        if ((ghostNewX - pacmanX) > (ghostX - pacmanX)) {
+          return true
+        } else {
+          return false
+        }
+      }
+
+      function isYCoordCloser() {
+        if ((ghostNewY - pacmanY) > (ghostY - pacmanY)) {
+          return true
+        } else {
+          return false
+        }
+      }
+
+      //if it's closer, move it
+      if (isXCoordCloser() || isYCoordCloser()) {
+        //add direction to current index
+        ghost.currentIndex += direction
+        //add ghost class
+        squares[ghost.currentIndex].classList.add(ghost.className)
+        squares[ghost.currentIndex].classList.add('ghost')
+      } else {
+        //add ghost class
+        squares[ghost.currentIndex].classList.add(ghost.className)
+        squares[ghost.currentIndex].classList.add('ghost')
+        direction = directions[Math.floor(Math.random() * directions.length)]
+      }
     } else direction = directions[Math.floor(Math.random() * directions.length)]
   
+
     //if gost is scared
     if (ghost.isScared) {
       console.log('ghost is scared')
