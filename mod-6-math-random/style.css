@@ -1,0 +1,15 @@
+body {
+    background-color: #FFABAB;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 200px;
+    
+}
+
+button {
+    background-color: #A79AFF;
+    border-radius: 5px;
+}
