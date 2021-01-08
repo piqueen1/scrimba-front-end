@@ -116,7 +116,11 @@ function control(e) {
 }
 
 checkForGameOver() {
-  
+  //check if next move hits snake
+  //if so remove 'snake' class
+  //add 'dead-snake" class
+  //clearInterval
+  //alert Game Over
 }
 
 document.addEventListener('keydown',control)
