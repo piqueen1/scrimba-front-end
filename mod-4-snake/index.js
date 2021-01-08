@@ -115,5 +115,9 @@ function control(e) {
   }
 }
 
+checkForGameOver() {
+  
+}
+
 document.addEventListener('keydown',control)
 startButton.addEventListener('click',startGame)
