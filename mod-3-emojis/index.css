@@ -46,6 +46,7 @@ h1 {
 
 input {
   margin: 0 auto;
+  margin-bottom: 30px;
   display: block;
   border: none;
   height: 30px;
@@ -68,5 +69,5 @@ button {
 .buttons-wrapper {
   display: flex;
   justify-content: center;
-  margin: 10px 0 40px;
+  margin: 10px 0 20px;
 }
