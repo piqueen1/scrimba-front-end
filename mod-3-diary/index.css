@@ -1,4 +1,28 @@
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 5%;
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+}
+
+.title {
+  color: #16697a;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.entry-textbox {
+  width: 20em;
+  height: 10em;
+  padding: 1em;
+  border-radius: 25px;
+  margin-bottom: 0.5em;
+  background-color: #ace4f0;
+  border: unset;
+}
+
+#entryForm .button {
+  border-radius: 15px;
+  padding: 5px 16px;
+  border: unset;
+  margin-left: 70%;
 }
