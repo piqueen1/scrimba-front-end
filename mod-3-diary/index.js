@@ -17,6 +17,11 @@ function addEntryToDom(event) {
   displayEntryButton.className = 'display-entry-button'
   displayEntryButton.innerText = entryNumber++
   entriesNav.appendChild(displayEntryButton)
+  displayEntryButton.addEventListener('click',function() {
+    let allEntries = document.querySelectorAll('.single-entry')
+    allEntries.forEach(entry => entry.style.display = 'none')
+    singleEntry.style.display = 'block'
+  })
 }
 
 entryForm.addEventListener('submit', addEntryToDom)
