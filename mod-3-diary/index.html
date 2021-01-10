@@ -8,13 +8,15 @@
             Create a new form with an ID of "entryForm"
             Inside the form, create a textarea with class of "entry-textbox"
         -->
-        <h1 class="title">Finn's Personal Diary</h1>
+        <h1 class="title">Hazel's Personal Diary</h1>
         <form id="entryForm">
-            <textarea class="entry-textbox" placeholder="Click here to start typing"></textarea>
+            <textarea class="entry-textbox" placeholder="Click here to start typing" required></textarea>
             <br />
             <button class="button" type="submit">Submit</button>
         </form>
-        <section id="entries"></section>
+        <section id="entries">
+            <div class="entries-nav"></div>
+        </section>
         <script src="index.js"></script>
     </body>
 </html>

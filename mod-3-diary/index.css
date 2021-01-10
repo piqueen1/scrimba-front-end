@@ -31,3 +31,15 @@ body {
   border: unset;
   margin-left: 70%;
 }
+
+#entries {
+  background-color: #16697a;
+  color: #ede7e3;
+  font-family: cursive;
+  border-radius: 15px;
+  padding: 2em;
+  border: unset;
+  margin-top: 1em;
+  max-width: 20em;
+  font-size: 1.2em;
+}
