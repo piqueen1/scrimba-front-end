@@ -11,7 +11,8 @@ colors:
 
 html,
 body {
-  margin: 20px;
+  margin: 0;
+  font-size: 21px;
 }
 
 .header {
@@ -24,8 +25,9 @@ body {
 .main {
   background-color: white;
   color: gray;
-  width: 600px;
+  width: 500px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .main-title {
@@ -41,6 +43,8 @@ body {
 .footer {
   background-color: #1d3c41;
   color: white;
+  text-align: center;
+  padding: 75px 0px;
   display: flex;
   justify-content: center;
 }
@@ -54,7 +58,7 @@ body {
 .column {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  margin: 0 10px;
 }
 
 .column-title {
