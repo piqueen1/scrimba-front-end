@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  width: 500px;
+}
+
+h1 {
+  color: #2e7ad3;
+  font-size: 48px;
+  text-align: center;
+}
+
+main {
+  background-color: #f1f1f1;
+  margin
+}
+
+h2 {
+  color: #104c90;
+  font-size: 32px;
+}
+
+img {
+  width: 450px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: #ff8000;
+  font-weight: bold;
+}
