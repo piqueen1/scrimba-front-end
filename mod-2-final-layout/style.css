@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+header {
+  background: #997b66;
+  color: #ffcb69;
+  text-align: center;
+  padding: 25px 0;
+  margin-bottom: 25px;
+}
+
+main {
+  background-color: #d9ae94;
+  width: 600px;
+  padding: 25px;
+  border: solid red 5px;
+  margin: 0 auto;
+}
+
+footer {
+  background: #997b66;
+  color: #ffcb69;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 25px;
+}
