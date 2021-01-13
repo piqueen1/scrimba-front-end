@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   width: 500px;
 }
 
@@ -7,16 +7,18 @@ h1 {
   color: #2e7ad3;
   font-size: 48px;
   text-align: center;
+  margin: 45px 0;
 }
 
 main {
   background-color: #f1f1f1;
-  margin
+  padding: 25px;
 }
 
 h2 {
   color: #104c90;
   font-size: 32px;
+  margin: 0 0 10px 0;
 }
 
 img {
@@ -30,4 +32,13 @@ p {
 a {
   color: #ff8000;
   font-weight: bold;
+}
+
+a:hover,
+a:focus {
+  color: #2e7ad3;
+}
+
+.read-more {
+  margin: 0;
 }
