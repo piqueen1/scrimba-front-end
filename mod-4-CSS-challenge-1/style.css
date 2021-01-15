@@ -7,27 +7,29 @@
    ========================== */
 
 body {
-  margin: 0;
+  margin: 75px;
   text-align: center;
+  font-family: "Lato", sans-serif;
 }
 
 /* Typography */
 
 h1 {
-  font-size: 48px;
+  font-size: 38px;
   color: white;
   margin: 0;
-  padding: 50px;
+  padding: 18px;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 36px;
+  margin-top: 50px;
+  font-size: 24px;
   text-transform: uppercase;
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 a {
@@ -42,6 +44,8 @@ a {
   padding: 10px;
   font-weight: bold;
   text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
 }
 
 /* Layout */
@@ -52,6 +56,6 @@ a {
 
 .title-section {
   background-color: darkblue;
-  width: 600px;
+  width: 540px;
   margin: 0 auto;
 }
