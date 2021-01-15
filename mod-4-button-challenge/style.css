@@ -1,0 +1,21 @@
+/* DON'T TOUCH THIS! */
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* DON'T TOUCH THIS! */
+
+/* ==========================
+	Write your solution here!
+   ========================== */
+
+.btn {
+}
+
+.btn:focus,
+.btn:hover {
+}
