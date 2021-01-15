@@ -6,3 +6,52 @@
 	Write your solution here!
    ========================== */
 
+body {
+  margin: 0;
+  text-align: center;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 48px;
+  color: white;
+  margin: 0;
+  padding: 50px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  color: orangered;
+}
+
+/* Button */
+
+.btn {
+  color: white;
+  background-color: orangered;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Layout */
+.container {
+  width: 650px;
+  margin: 0 auto;
+}
+
+.title-section {
+  background-color: darkblue;
+  width: 600px;
+  margin: 0 auto;
+}
