@@ -1,6 +1,16 @@
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
+  font-size: 18px;
+  color: #2e354f;
+}
+
+/* Typography */
+
+h1,
+h2,
+strong {
+  font-weight: 900;
 }
 
 h1 {
@@ -21,24 +31,35 @@ a {
   color: #ef5839;
 }
 
+a:hover,
+a:focus {
+  color: #d4b44c;
+}
+
+/* Layout */
+
 header {
   background-color: #2e354f;
   color: white;
-  margin: 0;
-  padding: 50px;
+  padding: 50px 0;
 }
+
 .container {
   width: 620px;
   margin: 0 auto;
 }
 
 .section-one {
+  padding: 45px 0;
 }
 
 .section-two {
   background-color: #2e354f;
   color: white;
+  padding: 45px 0;
 }
+
+/* Buttons */
 
 .btn {
   display: inline-block;
@@ -53,7 +74,16 @@ header {
   color: white;
 }
 
+.btn-accent:hover {
+  background: #d4b44c;
+}
+
 .btn-white {
   background-color: white;
   color: black;
+}
+
+.btn-white:hover {
+  color: white;
+  background: #999;
 }
