@@ -14,8 +14,20 @@ body {
    ========================== */
 
 .btn {
+  background: #ef5839;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Lato, sans-serif;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .btn:focus,
 .btn:hover {
+  background: #d4b44c;
+  color: #2e354f;
+  font-size: 20px;
+  padding: 15px;
 }
