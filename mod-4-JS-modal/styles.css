@@ -16,6 +16,14 @@ body {
   cursor: pointer;
 }
 
+#modal {
+  background-color: orange;
+  padding: 20px;
+  height: 200px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
 /** we need to style our open and close buttons, re-use the comma , to target both buttons **/
 
 /** modal -> remember we used an ID for this div? we can target it by doing #modal **/
