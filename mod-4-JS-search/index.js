@@ -1,12 +1,13 @@
-/*
-    Task: Capture the user's search query
-    1. Add an event listener for 'keyup'
-    2. Capture the event in a 'let' called 'searchQuery' - storing the value
-    3. Make sure the captured value is lowercase
-    4. Log to the console to demonstrate it works
-*/
-
 document.getElementById('searchInput').addEventListener('keyup', function(event) {
     let searchQuery = event.target.value.toLowerCase()
-    console.log(searchQuery)
+    let allNamesDOMCollection = document.getElementsByClassName('name')
+
+    for (let i=0; i<allNamesDOMCollection.length; i++) {
+        currentName = allNamesDOMCollection[i].textContent.toLowerCase()
+        if (searchQuery.includes(currentName)) {
+            allNamesDOMCollection[i].style.display = 'block';
+        } else {
+            allNamesDOMCollection[i].style.display = 'none'
+        }
+    }
 })
