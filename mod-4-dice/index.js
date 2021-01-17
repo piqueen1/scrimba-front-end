@@ -1,7 +1,7 @@
 // Create variables for the game state
 let score1 = 0
 let score2 = 0
-let player1turn = true
+let player1Turn = true
 
 //Create variables for dom nodes (all changing elements)
 const message = document.getElementById('message')
@@ -14,5 +14,21 @@ const resetBtn = document.getElementById('resetBtn')
 
 rollBtn.addEventListener('click', () => {
   const roll = Math.floor(Math.random() * 6) + 1
-  console.log(roll)
+  
+  if (player1Turn) {
+    player1Dice.textContent = roll
+    score1 += roll
+    scoreDisplay1.textContent = score1
+    message.textContent = "Player Two's Turn"
+    player1Dice.classList.remove('active')
+    player2Dice.classList.add('active')
+  } else {
+    player2Dice.textContent = roll
+    score2 += roll
+    scoreDisplay2.textContent = score2
+    message.textContent = "Player One's Turn"
+    player2Dice.classList.remove('active')
+    player1Dice.classList.add('active')
+  }
+  player1Turn = !player1Turn
 })
