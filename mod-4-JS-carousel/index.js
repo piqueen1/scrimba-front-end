@@ -6,12 +6,20 @@ document.getElementById('carousel-button-prev').addEventListener('click', moveTo
 document.getElementById('carousel-button-next').addEventListener('click', moveToNextSlide)
 
 function moveToPrevSlide() {
-  slidePosition -= 1
+  slides[slidePosition].classList.remove('carousel-item-visible')
+  
+  if (slidePosition === 0) {
+    slidePosition = totalSlides - 1
+  } else {
+    slidePosition--
+  }
+  slides[slidePosition].classList.add('carousel-item-visible')
+
 }
 
 function moveToNextSlide() {
   slides[slidePosition].classList.remove('carousel-item-visible')
-  
+
   if (slidePosition === totalSlides - 1) {
     slidePosition = 0
   } else {
