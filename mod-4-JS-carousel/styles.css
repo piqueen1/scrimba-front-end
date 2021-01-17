@@ -19,6 +19,7 @@ img {
 
 .carousel-item-visible {
   display: block;
+  animation: fadeVisibility 0.5s;
 }
 
 .carousel-actions {
@@ -41,10 +42,29 @@ img {
   cursor: pointer;
 }
 
+#carousel-text {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 80%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 40px;
+}
+
 #carousel-button-prev {
   margin-left: 20px;
 }
 
 #carousel-button-next {
   margin-right: 20px;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

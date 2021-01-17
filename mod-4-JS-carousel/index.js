@@ -26,7 +26,6 @@ function moveToNextSlide() {
     slidePosition += 1
   }
   slides[slidePosition].classList.add('carousel-item-visible')
-
 }
 
-console.log(totalSlides)
+setInterval(moveToNextSlide, 3000)
