@@ -31,4 +31,15 @@ rollBtn.addEventListener('click', () => {
     player1Dice.classList.add('active')
   }
   player1Turn = !player1Turn
+
+  //check for winner
+  if (score1 >= 20) {
+    message.textContent = "Player One WINS!  WOOT!"
+    rollBtn.style.display = 'none'
+    resetBtn.style.display = 'block'
+  } else if (score2 >= 20) {
+    message.textContent = "Player Two WINS!  WOOT!"
+    rollBtn.style.display = 'none'
+    resetBtn.style.display = 'block'
+  }
 })
