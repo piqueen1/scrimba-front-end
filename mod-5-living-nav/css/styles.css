@@ -1,43 +1,49 @@
-/*  Fonts
-    -----
-    font-family: 'Lora', serif;
-    font-family: 'Ubuntu', sans-serif;
- */
-
 body {
   margin: 0;
-  text-align: center;
+  font-family: "Ubuntu", sans-serif;
 }
 
-header {
-  margin: 0 auto;
-}
+/* Typography */
 
 h1 {
   font-family: "Lora", serif;
-  font-size: 3.375rem;
+  font-size: 2rem;
   color: #143774;
+  font-weight: 400;
+  margin: 0;
 }
 
-p {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
+.subtitle {
+  font-weight: 700;
   color: #1792d2;
+  font-size: 0.75rem;
+  margin: 0;
 }
 
-nav {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
+header {
+  text-align: center;
+  background: #f8f8f8;
+  padding: 2em 0;
 }
 
-ul {
+nav ul {
   display: flex;
-  flex-direction: row;
-  list-style-type: none;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
 }
 
-a {
+nav li {
+  margin: 0 1em;
+}
+
+nav a {
   text-decoration: none;
+  color: #707070;
+  font-weight: 700;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #1792d2;
 }
