@@ -11,6 +11,11 @@ body {
   font-weight: 300;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 /* =================
 Typography
 ================= */
@@ -28,8 +33,17 @@ h1 {
   margin: 0;
 }
 
+a {
+  color: #1792d2;
+}
+
+a:hover,
+a:focus {
+  color: #143774;
+}
+
 strong {
-  font-weight: 900;
+  font-weight: 700;
 }
 /* the logo subtitle */
 .subtitle {
@@ -60,15 +74,6 @@ strong {
   text-decoration: underline;
 }
 
-.article-past {
-  color: #1792d2;
-}
-
-.article-past:hover,
-.article-past:focus {
-  color: #143774;
-}
-
 /* =================
 Layout
 ================= */
@@ -79,7 +84,7 @@ Layout
   margin: 0 auto;
 }
 
-.container-nav {
+.container-flex {
   display: flex;
   justify-content: space-between;
 }
@@ -90,13 +95,21 @@ header {
 }
 
 @media (max-width: 675px) {
-  .container-nav {
+  .container-flex {
     flex-direction: column;
   }
 
   header {
     text-align: center;
   }
+}
+
+main {
+  width: 75%;
+}
+
+aside {
+  width: 20%;
 }
 
 /* navigation */
