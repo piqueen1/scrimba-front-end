@@ -58,6 +58,10 @@ strong {
   font-size: 1.5rem;
 }
 
+.subtitle-about {
+  color: #1792d2;
+}
+
 .article-read-more,
 .article-info {
   font-size: 0.875rem;
@@ -205,6 +209,14 @@ nav a:focus {
   border-bottom: #707070 1px solid;
   padding-bottom: 2em;
   margin-bottom: 2em;
+}
+
+.article-featured .about {
+  border-bottom: none;
+}
+
+.body-about {
+  margin-top: 2em;
 }
 
 .article-recent {
