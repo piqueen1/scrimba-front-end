@@ -1,36 +1,78 @@
 /* DON'T TOUCH THIS! */
 body {
-	margin: 0;
-	font-family: 'Ubuntu', sans-serif;
-	overflow-x: hidden;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden;
 }
 .header {
-	font-family: 'Lora', serif;
-	color: #143774;
-	background: #F8F8F8;
-	text-align: center;
-	font-size: 3rem;
-	font-weight: 400;
-	padding: 0.75em;
-	margin: 0;
-	width: 100%;
+  font-family: "Lora", serif;
+  color: #143774;
+  background: #f8f8f8;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 0.75em;
+  margin: 0;
+  width: 100%;
 }
 
 .post-title {
-	color: #1792D2;
-	font-size: 2rem;
+  color: #1792d2;
+  font-size: 2rem;
 }
 
 .post-description {
-	color: #707070;
-	font-size: 1.125rem;
+  color: #707070;
+  font-size: 1.125rem;
 }
 
 .post {
-	background: #E1E1E1;
+  background: #e1e1e1;
 }
 /* DON'T TOUCH THIS! */
 
 /* ==========================
 	Write your solution here!
-   ========================== */
+	 ========================== */
+.post {
+  text-align: center;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+}
+
+.post-title {
+  order: 1;
+}
+
+.post-image {
+  width: 75%;
+  order: 3;
+  padding-bottom: 1em;
+  margin: 0 auto;
+}
+
+.post-description {
+  order: 2;
+}
+
+@media (min-width: 600px) {
+  .body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .post {
+    max-width: 40%;
+  }
+
+  .post-image {
+    order: 2;
+    max-width: 90%;
+  }
+
+  .post-description {
+    order: 3;
+  }
+}
