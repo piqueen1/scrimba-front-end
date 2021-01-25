@@ -12,6 +12,7 @@ body {
   font-size: 3rem;
   font-weight: 400;
   padding: 0.75em;
+  padding-left: 0;
   margin: 0;
   width: 100%;
 }
@@ -34,45 +35,45 @@ body {
 /* ==========================
 	Write your solution here!
 	 ========================== */
-.post {
-  text-align: center;
-  border-radius: 5%;
+.posts {
   display: flex;
-  flex-direction: column;
-  margin: 2em;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 1em auto;
+  text-align: center;
 }
 
-.post-title {
-  order: 1;
+.post {
+  width: 90%;
+  margin: 1em;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .post-image {
-  width: 75%;
-  order: 3;
-  padding-bottom: 1em;
-  margin: 0 auto;
+  width: 70%;
+  object-fit: cover;
+  order: 1;
 }
 
-.post-description {
-  order: 2;
+.post * {
+  margin: 1em;
 }
 
 @media (min-width: 600px) {
-  .body {
-    display: flex;
-    flex-wrap: wrap;
+  .posts {
+    flex-flow: row wrap;
+    justify-content: center;
   }
 
   .post {
-    max-width: 40%;
+    width: 40%;
   }
 
   .post-image {
-    order: 2;
-    max-width: 90%;
-  }
-
-  .post-description {
-    order: 3;
+    order: 0;
   }
 }
