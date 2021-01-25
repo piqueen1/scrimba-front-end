@@ -1,0 +1,22 @@
+/* ==========================
+	Write your solution here!
+   ========================== */
+.nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+}
+
+.title {
+  color: #143774;
+  font-family: Lora;
+}
+
+.links {
+  font-family: Ubuntu;
+  color: #717171;
+}
+
+.link {
+  text-decoration: none;
+}
