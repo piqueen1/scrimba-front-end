@@ -160,8 +160,8 @@ header {
 }
 
 footer {
-  background: #143774;
-  color: white;
+  background: #345480;
+  color: rgba(255, 255, 255, 0.65);
   text-align: center;
   padding: 3em 0;
 }
