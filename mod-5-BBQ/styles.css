@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Source Sans Pro, sans-serif;
@@ -92,6 +96,7 @@ strong {
 
   .main-content,
   .intro {
-    max-width: 50%;
+    width: 50%;
+    min-height: 100vh;
   }
 }
