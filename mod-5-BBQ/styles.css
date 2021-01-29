@@ -86,6 +86,24 @@ strong {
   margin-right: auto;
 }
 
+/* form */
+
+.email-collector {
+  border: 3px #f18119 solid;
+  width: 80%;
+  max-width: 300px;
+}
+
+input,
+.btn {
+  width: 100%;
+}
+
+input {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
 /* media queries */
 
 @media (min-width: 500px) {
