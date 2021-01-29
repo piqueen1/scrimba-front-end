@@ -48,6 +48,10 @@ h3 {
   font-weight: 900;
   color: #f18119;
   order: -1;
+  border-top: 5px solid #f18119;
+  border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+  margin-top: 0;
+  padding-top: 2px;
 }
 
 .fine-print {
@@ -105,6 +109,8 @@ input {
   font-family: inherit;
   padding: 0.25em;
   border: 1px solid #404040;
+  transition: transform 250ms;
+  transform: scale(1);
 }
 
 .btn {
@@ -125,6 +131,8 @@ input {
   transition: transform 250ms;
 }
 
+input:focus,
+.btn-primary:focus,
 .btn-primary:hover {
   transform: scale(1.1);
 }
