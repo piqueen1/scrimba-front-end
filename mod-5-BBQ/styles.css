@@ -89,7 +89,6 @@ strong {
 /* form */
 
 .email-collector {
-  border: 3px #f18119 solid;
   width: 80%;
   max-width: 300px;
 }
@@ -122,11 +121,12 @@ input {
 .btn-primary {
   background-image: linear-gradient(to left, #ff713b, #ffa51d);
   color: #fff;
-  transition: color 250ms;
+  transform: scale(1);
+  transition: transform 250ms;
 }
 
 .btn-primary:hover {
-  color: black;
+  transform: scale(1.1);
 }
 
 /* media queries */
