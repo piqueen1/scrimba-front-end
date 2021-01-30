@@ -2,7 +2,7 @@ let emailCollectorForm = document.getElementById("Email-Collector")
 emailCollectorForm.addEventListener("submit", event => {
   event.preventDefault()
  
-  let userFormData = new FormData(document.getElementById('Email-Collector'))
+  let userFormData = new FormData(event.target)
   // use FormData to get the User's name and email    
   let userFirstName = userFormData.get('firstName')
   let userEmailAddress = userFormData.get('emailAddress')
