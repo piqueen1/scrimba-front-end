@@ -30,5 +30,16 @@ function postData() {
   .then(data => console.log('post data: ',data))
 }
 
-getData()
-postData()
+// getData()
+// postData()
+
+const apiUrl = "https://api.chucknorris.io/jokes/random";
+
+async function getJoke() {
+  let result = await fetch(apiUrl)
+  let joke = await result.json()
+
+  console.log(joke)
+}
+
+getJoke()
