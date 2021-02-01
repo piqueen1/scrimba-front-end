@@ -6,19 +6,20 @@
  * Docs - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 */
 
-const getUserData = () => {
-  return new Promise( (resolve,reject) => {
-    setTimeout( () => {
-      const error = false;
-      if( error ) {
-        reject("No user data was found")
-      } else {
-        resolve("Here is your user data")
-      }
-    }, 3000)
-  })
-}
+const getUserData = new Promise((resolve,reject) => {
+  const error = false;
 
-getUserData()
-.then( (success) => console.log(success) )
-.catch( (error) => console.log(error) );
+  if(error) {
+    reject('500 Level Error')
+  } else {
+    resolve({
+      firstName: 'Dylan',
+      age: 32,
+      email: 'DylansEmail310@gmail.com'
+    });
+  }
+});
+
+getUserData
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
