@@ -39,7 +39,7 @@ async function getJoke() {
   let result = await fetch(apiUrl)
   let joke = await result.json()
 
-  console.log(joke)
+  console.log(joke.value)
 }
 
 getJoke()
