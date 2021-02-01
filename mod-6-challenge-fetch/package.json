@@ -10,5 +10,8 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack -w"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
   }
 }
