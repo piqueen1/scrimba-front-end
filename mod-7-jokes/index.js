@@ -4,10 +4,26 @@ const punchlineBtn = document.getElementById('punchlineBtn')
 const newJokeBtn = document.getElementById('newJokeBtn')
 let punchline = ""
 
+punchlineBtn.addEventListener('click', getPunchline)
+newJokeBtn.addEventListener('click', getNewJoke)
+
+function getPunchline() {
+  punchlineDiv.innerHTML = punchline;
+  punchlineDiv.classList.add('bubble')
+  punchlineBtn.classList.toggle('hidden')
+  newJokeBtn.classList.toggle('hidden')
+}
+
+function getNewJoke() {
+  punchlineDiv.innerHTML = "";
+  punchlineDiv.classList.remove('bubble')
+  punchlineBtn.classList.toggle('hidden')
+  newJokeBtn.classList.toggle('hidden')
+}
+
+
 async function getJoke() {
   const jokePromise = await fetch("https://official-joke-api.appspot.com/jokes/programming/random")
-
-
   const joke = await jokePromise.json()
 
   setupDiv.innerHTML = joke[0].setup
@@ -15,11 +31,6 @@ async function getJoke() {
   
   punchlineBtn.classList.toggle('hidden')
   newJokeBtn.classList.toggle('hidden')
-
 }
-
-    // Create a global variable called punchline which will store the current punchline and will be updated with each new joke
-    // Assign the current jokes punchline to the punchline variable.
-
 
 getJoke()
