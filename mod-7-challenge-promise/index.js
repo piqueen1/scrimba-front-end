@@ -7,13 +7,13 @@
 
 const randomBool = Boolean(Math.round(Math.random())) // returns either 0 or 1 
 
-function heroPromise(randomBool) {
+function heroPromise() {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
             if (randomBool) {
                 resolve('Batman is here')
             } else {
-                reject('Hero is on vacation')
+                reject(new Error('Hero is on vacation'))
             }
         },4000)
     })
