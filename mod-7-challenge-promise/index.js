@@ -7,12 +7,22 @@
 
 const randomBool = Boolean(Math.round(Math.random())) // returns either 0 or 1 
 
-function 
+function heroPromise(randomBool) {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            if (randomBool) {
+                resolve('Batman is here')
+            } else {
+                reject('Hero is on vacation')
+            }
+        },4000)
+    })
+}
 
 (async function() {
     try{
-        
-        
+        const result = await heroPromise()
+        console.log(result)
     }catch(err){
         console.log(err)
     }
