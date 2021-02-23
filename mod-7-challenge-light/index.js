@@ -11,13 +11,34 @@ const turnOffLight = (currentLight) =>{
 }
 
 const changeLight = ()=>{
-    return new Promise((resolve)=>{
-        resolve(() => {
-            turnOffLight(lights[active])
-            active += 1
-            switchLight(lights[active])
-        })
-    }, 500)
+    return new Promise((res,rej) => {
+        let currentLight = lights[active]
+        if (currentLight === 0) {
+            switchLight(currentLight)
+            setTimeout(() => {
+                turnOffLight(currentLight)
+                active = 1
+                res(active)
+            }, 1000)
+            console.log('CurrentLight = 0')
+        }
+        if (currentLight === 1) {
+            switchLight(currentLight)
+            setTimeout(() => {
+                turnOffLight(currentLight)
+                active = 2
+                res(active)
+            }, 4000)
+        }
+        if (currentLight === 2) {
+            switchLight(currentLight)
+            setTimeout(() => {
+                turnOffLight(currentLight)
+                active = 0
+                res(active)
+            }, 2000)
+        }
+    })
 }
 
 (async function() {
@@ -29,4 +50,3 @@ const changeLight = ()=>{
         console.log(err)
     }
 })();
-
