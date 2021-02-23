@@ -11,7 +11,13 @@ const turnOffLight = (currentLight) =>{
 }
 
 const changeLight = ()=>{
-   
+    return new Promise((resolve)=>{
+        resolve(() => {
+            turnOffLight(lights[active])
+            active += 1
+            switchLight(lights[active])
+        })
+    }, 500)
 }
 
 (async function() {
