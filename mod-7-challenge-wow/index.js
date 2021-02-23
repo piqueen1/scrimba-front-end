@@ -38,7 +38,11 @@ const taskSmiley = ()=>{
 (async function() {
     try{
       let wow = ''
-      
+      const W = await taskW()
+      const OW = await Promise.all([taskO(),taskW()])
+      const smileyExclaim = await Promise.race([taskSmiley(),taskExclaim()]) 
+      wow = W + OW.join('') + smileyExclaim
+      console.log(wow)
     }catch(err){
         console.log(err)
     }
