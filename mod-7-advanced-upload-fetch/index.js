@@ -12,7 +12,12 @@ form.addEventListener('submit', function(e) {
 });
 
 async function uploadFile(data) {
-  const formData = new FormData(data)
+  const formData = new FormData()
+  const files = data.querySelector('input[type="file"]').files;
+  
+  for (let i=0; i<files.length; i++) {
+    formData.append(`fileInput_${i}`, files[i])
+  }
 
   const options = {
     method: 'POST',
@@ -28,3 +33,5 @@ async function uploadFile(data) {
     console.error(`I failed because of ${promise.status}`)
   }
 }
+
+//This uploads multiple files at once and submits them with formData
