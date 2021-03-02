@@ -3,7 +3,65 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <header>
+        <header>Punk API Beer App</header>
+        <div class="container">
+            <div class="filters">
+                <div class="card filter-card">
+                    <div class="filter-container">
+                        <div class="filter-text">
+                            <p>Alcohol Volume (ABV):</p>                           
+                        </div>
+                        <div class="filter">
+                            <form id="filterABV" class="filter-form">
+                                <label for="abvAll">
+                                    <input type="radio" name="filter-abv" class="filter-all" id="abvAll" value="all" checked />
+                                    <span>All</span>
+                                </label>
+                                <label for="abvWeak">
+                                    <input type="radio" name="filter-abv" class="beer" id="abvWeak" value="all" />
+                                    
+                                </label>
+                                <label for="abvMedium">
+                                    <input type="radio" name="filter-abv" class="beer" id="abvMedium" value="all" />
+                                    
+                                </label>
+                                <label for="abvStrong">
+                                    <input type="radio" name="filter-abv" class="beer" id="abvStrong" value="all" />
+                                    
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- End of ABV Card -->
+                <div class="card filter-card">
+                    <div class="filter-container">
+                        <div class="filter-text">
+                            <p>Alcohol Volume (ABV):</p>                           
+                        </div>
+                        <div class="filter">
+                            <form id="filterABV" class="filter-form">
+                                <label for="abvAll">
+                                    <input type="radio" name="filter-abv" class="filter-all" id="abvAll" value="all" checked />
+                                    <span>All</span>
+                                </label>
+                                <label for="abvWeak">
+                                    <input type="radio" name="filter-abv" class="beer" id="abvWeak" value="all" />
+                                    
+                                </label>
+                                <label for="abvMedium">
+                                    <input type="radio" name="filter-abv" class="beer" id="abvMedium" value="all" />
+                                    
+                                </label>
+                                <label for="abvStrong">
+                                    <input type="radio" name="filter-abv" class="beer" id="abvStrong" value="all" />
+                                    
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- End of Hoppiness Card -->
+            </div>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>
