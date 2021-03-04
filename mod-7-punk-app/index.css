@@ -112,11 +112,32 @@ input + svg {
 .beer:hover,
 .beer:checked + svg,
 .beer:focus + svg {
-  fill: var(--orange;
+  fill: var(--orange);
 }
 
 .hops:hover,
 .hops:checked + svg,
 .hops:focus + svg {
   fill: var(--green);
+}
+
+/* pagination buttons */
+.page-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 2rem;
+  padding: 0 0.8rem;
+  color: var(--off-white);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.page-btn:hover {
+  color: var(--blue);
+}
+
+.page-btn:disabled {
+  cursor: default;
+  color: var(--disabled);
 }
