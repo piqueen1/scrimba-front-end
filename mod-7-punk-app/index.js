@@ -1,14 +1,42 @@
 // variables
-const urlBase = "https://api.punkapi.com/v2/beers"
+const urlBase = "https://api.punkapi.com/v2/beers";
+const filterABV = document.getElementById('filterABV');
+let optionsABV = "";
+
+//filters
+filterABV.addEventListener("change", e=> {
+  const value = e.target.value;
+
+  switch (value) {
+    case "all":
+      optionsABV = "";
+      break
+    case "weak":
+      optionsABV = "abv_lt=4.6"
+      break
+    case "medium": 
+      optionsABV = "abv_gt=4.5&abv_lt=7.6";
+      break
+    case "strong": 
+      optionsABV = "abv_gt=7.5";
+      break
+  }
+
+  getBeers();
+});
 
 async function getBeers() {
-  const promise = await fetch(urlBase)
-  const beers = await promise.json()
+  const url = urlBase + "?" + optionsABV;
+  console.log(url);
+
+  //fetch
+  const promise = await fetch(url);
+  const beers = await promise.json();
 
   // render data
-  const beersDiv = document.querySelector('.beers')  
-  
-  let beerHtml = ""
+  const beersDiv = document.querySelector('.beers');
+
+  let beerHtml = "";
 
   beers.forEach(beer => {
     beerHtml += `
@@ -33,7 +61,7 @@ async function getBeers() {
     `
   })
 
-  beersDiv.innerHTML = beerHtml
+  beersDiv.innerHTML = beerHtml;
 }
 
 
