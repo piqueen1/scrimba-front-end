@@ -11,5 +11,7 @@ function increment() {
 
 function save() {
   let printable = count + " - "
-  saveEl.innerText += printable
+  saveEl.textContent += printable
+  count = 0
+  document.getElementById("count-el").innerText = count
 }
