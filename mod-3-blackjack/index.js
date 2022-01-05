@@ -44,5 +44,12 @@ function newCard() {
 }
 
 function getRandomCard() {
-  
+  let value = Math.floor(Math.random() * 13) + 1
+  if (value === 1) {
+    return 11
+  } else if (value >= 11) {
+    return 10
+  } else {
+    return value
+  }
 }
