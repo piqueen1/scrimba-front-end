@@ -6,10 +6,13 @@ let listItems = ""
 
 inputBtn.addEventListener("click", function() {
   myLeads.push(inputEl.value)
+  ulEl.innerHTML = ""
   renderLeads()
 })
 
 function renderLeads() {
+  listItems = ""
+  ulEl.innerHTML = listItems
   for (let i=0; i<myLeads.length; i++) {
     listItems += "<li>" + myLeads[i] + "</li>"
   }
