@@ -5,10 +5,9 @@ const ulEl = document.getElementById("ul-el")
 
 inputBtn.addEventListener("click", function() {
   myLeads.push(inputEl.value)
-  console.log(myLeads)
+  for (let i=0; i<myLeads.length; i++) {
+    ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+  }
 })
 
-for (let i=0; i<myLeads.length; i++) {
-  console.log(myLeads[i])
-}
 
