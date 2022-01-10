@@ -7,6 +7,7 @@ let listItems = ""
 inputBtn.addEventListener("click", function() {
   myLeads.push(inputEl.value)
   ulEl.innerHTML = ""
+  inputEl.value = ""
   renderLeads()
 })
 
