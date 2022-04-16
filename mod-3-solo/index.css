@@ -1,6 +1,18 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: black;
+}
+
+/* light-initial */
+#initial {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  left: 89px;
+  top: 83px;
+
+  background: #FBF7EE;
 }
 
 /* background */
@@ -67,4 +79,132 @@ html, body {
   text-align: center;
 
   color: #FFFFFF;
+}
+
+/* Sub-heading */
+
+#sub-heading-1 {
+  position: absolute;
+  width: 346px;
+  height: 25px;
+  left: 102px;
+  top: 297px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  text-align: center;
+
+  color: purple;
+  /* color: #1A1921; */
+}
+
+#sub-text-1 {
+  position: absolute;
+  width: 346px;
+  height: 25px;
+  left: 102px;
+  top: 327px;
+
+  /* text-sm/leading-5/font-normal */
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  text-align: center;
+
+  color: purple;
+  /* color: #4E4E4E; */
+}
+
+#sub-heading-2 {
+  position: absolute;
+  width: 346px;
+  height: 25px;
+  left: 102px;
+  top: 379px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  text-align: center;
+
+  color: blue;
+  /* color: #1A1921; */
+}
+
+#sub-text-2 {
+  position: absolute;
+  width: 346px;
+  height: 25px;
+  left: 102px;
+  top: 409px;
+
+  /* text-sm/leading-5/font-normal */
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  text-align: center;
+
+  color: blue;
+  /* color: #4E4E4E; */
+}
+
+#sub-heading-3 {
+  position: absolute;
+  width: 346px;
+  height: 25px;
+  left: 102px;
+  top: 461px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  text-align: center;
+
+  color: rgb(27, 126, 137);
+  /* color: #1A1921; */
+}
+
+#sub-text-3 {
+  position: absolute;
+  width: 346px;
+  height: 25px;
+  left: 102px;
+  top: 491px;
+
+  /* text-sm/leading-5/font-normal */
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  text-align: center;
+
+  color: rgb(27, 126, 137);
+  /* color: #4E4E4E; */
 }
